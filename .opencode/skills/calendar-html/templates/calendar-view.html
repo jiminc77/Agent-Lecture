@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>일정 확인 달력</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f7fb;
+      --panel: #ffffff;
+      --ink: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --accent: #2563eb;
+      --accent-soft: #dbeafe;
+      --today: #fef3c7;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-end;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: clamp(28px, 4vw, 44px);
+      letter-spacing: -0.04em;
+    }
+
+    .subtitle, .generated {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .calendar {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--panel);
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+    }
+
+    .weekdays, .grid {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+    }
+
+    .weekday {
+      padding: 14px 10px;
+      background: #f9fafb;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .day {
+      min-height: 132px;
+      padding: 10px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .day:nth-child(7n) { border-right: 0; }
+    .day.outside { background: #f9fafb; color: #9ca3af; }
+    .day.today { background: var(--today); }
+
+    .date {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      margin-bottom: 8px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .today .date { background: #f59e0b; color: white; }
+
+    .event {
+      margin: 6px 0 0;
+      padding: 8px 9px;
+      border-left: 4px solid var(--accent);
+      border-radius: 10px;
+      background: var(--accent-soft);
+      color: #1e3a8a;
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .event strong {
+      display: block;
+      margin-bottom: 2px;
+      font-size: 13px;
+    }
+
+    .event .time, .event .notes {
+      color: #1d4ed8;
+    }
+
+    .empty-state {
+      padding: 28px;
+      margin-top: 16px;
+      border: 1px dashed #cbd5e1;
+      border-radius: 16px;
+      background: #fff;
+      color: var(--muted);
+    }
+
+    @media (max-width: 760px) {
+      header { display: block; }
+      .weekdays { display: none; }
+      .grid { display: block; }
+      .day, .day:nth-child(7n) { border-right: 0; }
+      .day.outside { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div>
+        <h1>__CALENDAR_TITLE__</h1>
+        <p class="subtitle">Markdown 일정 초안에서 추출한 HTML 확인 화면입니다.</p>
+      </div>
+      <p class="generated">생성 시각: __GENERATED_AT__</p>
+    </header>
+
+    <section class="calendar" aria-label="일정 달력">
+      <div class="weekdays" aria-hidden="true">
+        <div class="weekday">일</div>
+        <div class="weekday">월</div>
+        <div class="weekday">화</div>
+        <div class="weekday">수</div>
+        <div class="weekday">목</div>
+        <div class="weekday">금</div>
+        <div class="weekday">토</div>
+      </div>
+      <div class="grid">
+        __CALENDAR_DAYS__
+      </div>
+    </section>
+
+    __EMPTY_STATE__
+  </main>
+</body>
+</html>
