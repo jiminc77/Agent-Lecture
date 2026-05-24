@@ -83,7 +83,7 @@ Use this structure for `output/intake.md`.
 
 - 기준 시각:
 - 입력 출처:
-- 사용자 관점:
+- 사용자 역할:
 
 ## 일정 후보
 

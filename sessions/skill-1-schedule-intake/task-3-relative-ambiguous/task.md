@@ -32,7 +32,7 @@ cp skill-templates/schedule-intake/SKILL.md .opencode/skills/schedule-intake/SKI
 raw-text.md를 읽고, 상대 날짜와 모호한 표현을 구분해서 일정 후보를 정리해줘.
 ```
 
-## 나와야 하는 결과
+## 목표 출력
 
 `output/intake.md`에 최소한 아래 내용이 포함되어야 한다.
 

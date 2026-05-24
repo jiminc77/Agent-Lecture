@@ -32,7 +32,7 @@ cp skill-templates/calendar-event-builder/SKILL.md .opencode/skills/calendar-eve
 intake.md를 읽고, 캘린더에 넣을 수 있는 일정 초안을 만들어줘.
 ```
 
-## 나와야 하는 결과
+## 목표 출력
 
 `output/schedule-preview.md`에 아래와 같은 일정 초안이 포함되어야 한다.
 

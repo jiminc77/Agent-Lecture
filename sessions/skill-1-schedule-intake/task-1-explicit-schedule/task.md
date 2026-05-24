@@ -32,7 +32,7 @@ cp skill-templates/schedule-intake/SKILL.md .opencode/skills/schedule-intake/SKI
 raw-text.md를 읽고, 나와 관련된 일정 후보를 정리해줘.
 ```
 
-## 나와야 하는 결과
+## 목표 출력
 
 `output/intake.md`에 최소한 아래 내용이 포함되어야 한다.
 
@@ -43,7 +43,7 @@ raw-text.md를 읽고, 나와 관련된 일정 후보를 정리해줘.
 
 - 기준 시각: 2026-05-22 14:00 KST
 - 입력 출처: raw-text.md
-- 사용자 관점: 현우
+- 사용자 역할: 현우
 
 ## 일정 후보
 

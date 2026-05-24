@@ -4,7 +4,7 @@
 
 - 기준 시각: 2026-05-22 14:00 KST
 - 입력 출처: sessions/skill-1-schedule-intake/task-1-explicit-schedule/raw-text.md
-- 사용자 관점: 현우
+- 사용자 역할: 현우
 
 ## 일정 후보
 
