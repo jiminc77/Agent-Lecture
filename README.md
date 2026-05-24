@@ -23,6 +23,8 @@ Task 1-3에서는 첫 번째 Skill을 만든다. Task 4-6에서는 두 번째 Sk
 
 템플릿에는 파일 입출력과 기본 Markdown/JSON 형식만 미리 들어 있다. 각 태스크 폴더의 `task.md`를 읽고, 먼저 지정된 Skill 템플릿의 TODO 섹션을 직접 채운다. 그 다음 opencode agent에게 짧은 자연어 요청을 보내 작성한 Skill이 제대로 동작하는지 확인한다.
 
+frontmatter `description`을 포함해 TODO 섹션은 한국어로 작성해도 된다. 다만 파일 경로, 카테고리 코드, JSON 필드명처럼 다음 단계가 그대로 읽는 값은 템플릿에 적힌 이름을 유지한다.
+
 ## 실행 방식
 
 각 태스크는 해당 태스크 디렉토리로 이동한 뒤 opencode를 실행한다. 
