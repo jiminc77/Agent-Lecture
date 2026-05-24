@@ -20,13 +20,11 @@ cp skill-templates/schedule-intake/SKILL.md .opencode/skills/schedule-intake/SKI
 
 - `Personal relevance rules`
 - `Exclusion rules`
-- `Evidence`
-- `Procedure` 보강
 
 ## 진행 순서
 
 1. 실습자가 먼저 `.opencode/skills/schedule-intake/SKILL.md`의 Task 2 관련 TODO를 직접 채운다.
-2. Task 1에서 작성한 내용은 유지하고, 판단 규칙만 보강한다.
+2. Task 1에서 작성한 내용은 유지하고, 나와 관련된 항목과 제외할 항목을 판단하는 규칙만 보강한다.
 3. 저장 후 이 태스크 디렉토리에서 opencode를 실행한다.
 4. opencode agent에게 아래처럼 요청한다.
 
@@ -41,9 +39,9 @@ raw-text.md를 읽고, 맥락상 내가 해야 할 일정 후보를 정리해줘
 ```markdown
 ## 일정 후보
 
-| id | 제목 | 카테고리 | 원문 근거 | 날짜/시간 표현 | 해석 상태 | 확인 필요 |
-|---|---|---|---|---|---|---|
-| C1 | 고객사 B 자료 전달 | follow_up | "그럼 내일 오전 10시까지 고객사에 전달되면 좋겠습니다." / "현우: 고객사 B 자료는 제가 최종본 확인하고 보내겠습니다." | 2026-05-23 10:00 | 확정 | 없음 |
+| id | 제목 | 카테고리 | 원문 근거 | 날짜/시간 표현 | 확인 필요 |
+|---|---|---|---|---|---|
+| C1 | 고객사 B 자료 전달 | follow_up | "그럼 내일 오전 10시까지 고객사에 전달되면 좋겠습니다." / "현우: 고객사 B 자료는 제가 최종본 확인하고 보내겠습니다." | 2026-05-23 10:00 | 없음 |
 
 ## 제외한 항목
 
