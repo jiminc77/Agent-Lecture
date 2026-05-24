@@ -13,9 +13,8 @@
 ## 진행 순서
 
 1. Task 1-6을 통해 작성한 두 Skill이 충분히 완성되어 있는지 확인한다.
-2. 두 Skill의 frontmatter `description`과 `When to use`가 Skill 이름 없이도 자연어 요청에서 발견될 만큼 명확한지 확인한다.
-3. 이 태스크 디렉토리에서 opencode를 실행한다.
-4. Skill 이름을 직접 말하지 않고, opencode agent에게 아래처럼 요청한다.
+2. 이 태스크 디렉토리에서 opencode를 실행한다.
+3. Skill 이름을 직접 말하지 않고, opencode agent에게 아래처럼 요청한다.
 
 ```text
 raw-text.md를 읽고,
@@ -23,10 +22,19 @@ raw-text.md를 읽고,
 부족한 값이 있으면 먼저 질문해줘.
 ```
 
-## 완료 기준
+## 나와야 하는 결과
 
-- `output/intake.md`가 생성된다.
-- `output/schedule-preview.md`가 생성된다.
-- `output/calendar-events.json`이 생성된다.
-- `output/calendar-view.html`이 생성된다.
-- 실제 외부 캘린더에는 아무것도 쓰지 않는다.
+아래 파일들이 생성되어야 한다.
+
+```text
+output/intake.md
+output/schedule-preview.md
+output/calendar-events.json
+output/calendar-view.html
+```
+
+`output/intake.md`에는 고객사 A 콜, 견적서 최신본 확인, 고객사 B 자료 전달, 고객사 A 후속 회의 후보가 포함되어야 한다.
+
+고객사 B 자료 전달처럼 시간이 모호한 항목은 바로 확정하지 않고 먼저 질문해야 한다.
+
+`output/calendar-view.html`은 실제 외부 캘린더에 쓰지 않고 로컬 미리보기로만 생성되어야 한다.

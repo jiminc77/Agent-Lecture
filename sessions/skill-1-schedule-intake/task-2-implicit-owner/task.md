@@ -18,10 +18,10 @@ cp skill-templates/schedule-intake/SKILL.md .opencode/skills/schedule-intake/SKI
 
 ## 채울 섹션
 
-- `Personal relevance rules`: 이름으로 지목된 경우, 내가 하겠다고 말한 경우, 내가 가진 자료나 역할을 바탕으로 다음 행동이 배정된 경우를 판단한다.
-- `Exclusion rules`: 다른 사람에게 명확히 배정된 일, 배경 정보, 일정으로 만들 행동이 없는 항목을 제외한다.
-- `Evidence and confidence`: 포함한 후보마다 원문 근거를 남기고, 직접/간접/불확실한 배정에 따라 신뢰도를 구분한다.
-- `Procedure` 보강: Task 1의 기본 순서에 위 판단 규칙을 적용한다.
+- `Personal relevance rules`
+- `Exclusion rules`
+- `Evidence and confidence`
+- `Procedure` 보강
 
 ## 진행 순서
 
@@ -34,9 +34,21 @@ cp skill-templates/schedule-intake/SKILL.md .opencode/skills/schedule-intake/SKI
 raw-text.md를 읽고, 맥락상 내가 해야 할 일정 후보를 정리해줘.
 ```
 
-## 완료 기준
+## 나와야 하는 결과
 
-- `output/intake.md`가 생성된다.
-- 내가 직접 지시받지 않은 항목도 맥락상 내 일이면 후보로 잡힌다.
-- 다른 사람에게 명확히 배정된 일은 제외된다.
-- 각 후보에 원문 근거와 신뢰도가 있다.
+`output/intake.md`에 최소한 아래 내용이 포함되어야 한다.
+
+```markdown
+## 일정 후보
+
+| id | 제목 | 카테고리 | 원문 근거 | 날짜/시간 표현 | 해석 상태 | 신뢰도 | 확인 필요 |
+|---|---|---|---|---|---|---|---|
+| C1 | 고객사 B 자료 전달 | follow_up | "그럼 내일 오전까지 고객사에 전달되면 좋겠습니다." / "현우: 고객사 B 자료는 제가 최종본 확인하고 보내겠습니다." | 2026-05-23 오전 | 날짜 일부 해석 가능, 정확한 시간 없음 | medium | 오전 몇 시인지 확인 필요 |
+
+## 제외한 항목
+
+| 원문 | 제외 이유 |
+|---|---|
+| "수진: 저는 계약서 문구만 따로 볼게요." | 수진님에게 배정된 일 |
+| "디자인 시안은 유진님이 월요일까지 업데이트하기로 했습니다." | 유진님에게 배정된 일 |
+```
