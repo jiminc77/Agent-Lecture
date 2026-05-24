@@ -3,7 +3,7 @@
 ## 기준 정보
 
 - 기준 시각: 2026-05-22 14:00 KST
-- 입력 출처: sessions/skill-1-schedule-intake/task-2-implicit-owner/raw-text.md
+- 입력 출처: Task 5 실습용 일정 후보
 - 사용자 역할: 현우
 
 ## 일정 후보
