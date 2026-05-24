@@ -18,10 +18,10 @@ cp skill-templates/schedule-intake/SKILL.md .opencode/skills/schedule-intake/SKI
 
 ## 채울 섹션
 
-- `Personal relevance rules`
-- `Exclusion rules`
-- `Evidence and confidence`
-- `Procedure` 보강
+- `Personal relevance rules`: 이름으로 지목된 경우, 내가 하겠다고 말한 경우, 내가 가진 자료나 역할을 바탕으로 다음 행동이 배정된 경우를 판단한다.
+- `Exclusion rules`: 다른 사람에게 명확히 배정된 일, 배경 정보, 일정으로 만들 행동이 없는 항목을 제외한다.
+- `Evidence and confidence`: 포함한 후보마다 원문 근거를 남기고, 직접/간접/불확실한 배정에 따라 신뢰도를 구분한다.
+- `Procedure` 보강: Task 1의 기본 순서에 위 판단 규칙을 적용한다.
 
 ## 진행 순서
 

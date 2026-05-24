@@ -18,8 +18,15 @@ cp skill-templates/schedule-intake/SKILL.md .opencode/skills/schedule-intake/SKI
 
 ## 채울 섹션
 
-- `Date and ambiguity handling`
-- `Procedure` 보강
+- `Date and ambiguity handling`: 기준 시각 사용, 상대 날짜 해석, 모호한 시간 표현, 원문 표현 보존 규칙을 적는다.
+- `Procedure` 보강: 후보마다 확정 가능, 일부 해석 가능, 확인 필요 상태를 구분한다.
+
+`Date and ambiguity handling`에는 아래 판단이 들어가야 한다.
+
+- 기준 시각이 있을 때만 "다음주 이 시간" 같은 표현을 해석한다.
+- "오전 중", "그 전에", "이번 주 안"처럼 정확한 시간이 없는 표현은 확인 필요로 남긴다.
+- 모호한 시간을 임의로 만들지 않는다.
+- 해석한 날짜/시간과 원문 표현을 함께 보존한다.
 
 ## 진행 순서
 

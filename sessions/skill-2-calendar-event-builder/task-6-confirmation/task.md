@@ -18,10 +18,10 @@ cp skill-templates/calendar-event-builder/SKILL.md .opencode/skills/calendar-eve
 
 ## 채울 섹션
 
-- `Confirmation policy`
-- `Duplicate and conflict checks`
-- `Validation checklist` 보강
-- `Procedure` 보강
+- `Confirmation policy`: 최종 파일을 쓰기 전에 만들 이벤트를 요약하고 사용자 확인을 받는다.
+- `Duplicate and conflict checks`: 같은 시간의 비슷한 제목, 같은 원문 근거, 겹치는 일정, 준비 일정의 순서를 확인한다.
+- `Validation checklist` 보강: 중복 가능성과 누락된 시간을 최종 생성 전에 다시 확인한다.
+- `Procedure` 보강: 추론, 중복 제거, 시간 조정이 있었으면 확인 전에는 최종 JSON을 쓰지 않는다.
 
 ## 진행 순서
 

@@ -2,7 +2,7 @@
 
 ## 목표
 
-짧고 명확한 텍스트에서 나와 관련된 일정 후보를 찾고, `schedule-intake` Skill의 기본 골격을 완성한다.
+짧고 명확한 텍스트에서 나와 관련된 일정 후보를 찾고, `schedule-intake` Skill의 기본 골격을 완성한다. 이번 태스크에서는 후보 추출뿐 아니라 카테고리, 원문 근거, 제외 항목까지 기본 출력에 들어가도록 만든다.
 
 ## 수정할 파일
 
@@ -22,9 +22,17 @@ cp skill-templates/schedule-intake/SKILL.md .opencode/skills/schedule-intake/SKI
 - `When to use`
 - `Procedure`의 기본 실행 순서
 
+`Procedure`에는 아래 판단이 들어가야 한다.
+
+- 기준 시각과 사용자 역할을 먼저 확인한다.
+- 나와 관련된 일정 후보를 찾는다.
+- 후보마다 기존 카테고리 중 하나를 선택한다.
+- 후보로 판단한 짧은 원문 근거를 남긴다.
+- 나와 관련 없는 항목은 제외 항목에 이유와 함께 남긴다.
+
 ## 진행 순서
 
-1. 실습자가 먼저 `.opencode/skills/schedule-intake/SKILL.md`의 Task 1 관련 TODO를 직접 채운다.
+1. `.opencode/skills/schedule-intake/SKILL.md`의 Task 1 관련 TODO를 직접 채운다.
 2. 저장 후 이 태스크 디렉토리에서 opencode를 실행한다.
 3. opencode agent에게 아래처럼 요청한다.
 

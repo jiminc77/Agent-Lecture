@@ -13,8 +13,9 @@
 ## 진행 순서
 
 1. Task 1-6을 통해 작성한 두 Skill이 충분히 완성되어 있는지 확인한다.
-2. 이 태스크 디렉토리에서 opencode를 실행한다.
-3. Skill 이름을 직접 말하지 않고, opencode agent에게 아래처럼 요청한다.
+2. 두 Skill의 frontmatter `description`과 `When to use`가 Skill 이름 없이도 자연어 요청에서 발견될 만큼 명확한지 확인한다.
+3. 이 태스크 디렉토리에서 opencode를 실행한다.
+4. Skill 이름을 직접 말하지 않고, opencode agent에게 아래처럼 요청한다.
 
 ```text
 raw-text.md를 읽고,

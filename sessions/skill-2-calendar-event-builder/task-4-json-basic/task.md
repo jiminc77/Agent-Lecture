@@ -2,7 +2,7 @@
 
 ## 목표
 
-`intake.md`에서 명확한 일정 후보를 읽어 `schedule-preview.md`를 만든다. 이 단계에서는 부족한 값이 거의 없는 입력만 다룬다.
+`intake.md`에서 명확한 일정 후보를 읽어 `schedule-preview.md`를 만든다. 이 단계에서는 부족한 값이 거의 없는 입력만 다루며, 캘린더 이벤트로 만들 수 있는 후보와 아직 보류해야 하는 후보를 구분한다.
 
 ## 수정할 파일
 
@@ -21,6 +21,13 @@ cp skill-templates/calendar-event-builder/SKILL.md .opencode/skills/calendar-eve
 - frontmatter의 `description`
 - `When to use`
 - `Procedure`의 기본 실행 순서
+
+`Procedure`에는 아래 판단이 들어가야 한다.
+
+- 일정으로 만들 수 있을 만큼 날짜와 시간이 충분한 후보만 선택한다.
+- 확인이 필요한 후보는 바로 JSON으로 만들지 않는다.
+- 사람이 읽을 수 있는 일정 요약을 먼저 만든다.
+- 템플릿에 있는 JSON 필드와 형식을 사용해 이벤트 블록을 만든다.
 
 ## 진행 순서
 

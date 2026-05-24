@@ -18,9 +18,16 @@ cp skill-templates/calendar-event-builder/SKILL.md .opencode/skills/calendar-eve
 
 ## 채울 섹션
 
-- `Validation checklist`
-- `Clarification policy`
-- `Procedure` 보강
+- `Validation checklist`: 제목, 시작 시각, 종료 시각 또는 duration, 시간 순서, 상대 날짜 해석 가능 여부를 확인한다.
+- `Clarification policy`: 정확한 시간이나 duration처럼 JSON 생성에 꼭 필요한 값만 짧게 질문한다.
+- `Procedure` 보강: JSON을 만들기 전에 검증하고, 부족한 값이 있으면 파일을 쓰기 전에 먼저 질문한다.
+
+질문 규칙에는 아래 판단이 들어가야 한다.
+
+- "오전"처럼 넓은 시간 표현을 임의의 시각으로 바꾸지 않는다.
+- 제외된 항목에 대해서는 질문하지 않는다.
+- 날짜는 충분하지만 시간이 부족하면 정확한 시간을 묻는다.
+- duration이 없으면 duration을 묻거나 기본 duration을 제안하고 확인을 받는다.
 
 ## 진행 순서
 
