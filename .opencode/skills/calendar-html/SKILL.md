@@ -1,6 +1,6 @@
 ---
 name: calendar-html
-description: Generate a local HTML calendar preview from output/schedule-preview.md or output/calendar-events.json without writing to any external calendar app.
+description: "output/schedule-preview.md 또는 output/calendar-events.json을 읽어 외부 캘린더에 쓰지 않고 로컬 HTML 달력 미리보기를 만든다."
 ---
 
 # Calendar HTML Skill
@@ -9,23 +9,23 @@ description: Generate a local HTML calendar preview from output/schedule-preview
 
 ## When to use
 
-Use this skill when the user asks to:
+사용자가 다음을 요청할 때 이 Skill을 사용한다.
 
-- make/render/create an HTML calendar preview
-- turn `schedule-preview.md` into `calendar-view.html`
-- show todo-derived events on a local calendar page
-- run the final step of the calendar demo
+- HTML 달력 미리보기를 만들기
+- `schedule-preview.md`를 `calendar-view.html`로 변환하기
+- 일정 JSON을 로컬 달력 화면에 표시하기
+- 캘린더 실습의 마지막 렌더링 단계 실행하기
 
 ## Inputs
 
-Preferred case-specific inputs, in order:
+입력은 아래 순서로 우선 사용한다.
 
 1. `output/schedule-preview.md`
 2. `output/calendar-events.json`
-3. Any user-provided Markdown file with fenced `json` event blocks
-4. Any JSON file containing one event object or an array of event objects
+3. 사용자가 제공한 Markdown 파일의 fenced `json` 이벤트 블록
+4. 이벤트 객체 하나 또는 이벤트 객체 배열이 들어 있는 JSON 파일
 
-Expected event fields. `start` and `end` are both required:
+이벤트 필드는 아래 형식을 기대한다. `start`와 `end`는 모두 필수다.
 
 ```json
 {
@@ -38,7 +38,7 @@ Expected event fields. `start` and `end` are both required:
 
 ## Outputs
 
-Default outputs:
+기본 출력:
 
 ```text
 output/calendar-events.json
@@ -47,18 +47,19 @@ output/calendar-view.html
 
 ## Procedure
 
-1. Prefer `output/schedule-preview.md` if it exists.
-2. Use `output/calendar-events.json` if the Markdown preview is not available.
-3. Run the bundled renderer script instead of hand-writing the HTML.
-4. Keep all output local. Do not call Google Calendar, MCP, CalDAV, OAuth, or any external write API.
-5. After rendering, report the output file paths and event count.
+1. `output/schedule-preview.md`가 있으면 먼저 사용한다.
+2. Markdown 미리보기 파일이 없으면 `output/calendar-events.json`을 사용한다.
+3. HTML을 직접 쓰지 말고 포함된 렌더러 스크립트를 실행한다.
+4. 모든 출력은 로컬에만 남긴다. Google Calendar, MCP, CalDAV, OAuth, 외부 쓰기 API를 호출하지 않는다.
+5. 렌더링 후 출력 파일 경로와 이벤트 개수를 보고한다.
 
 ## Command
 
-From the current task directory:
+현재 태스크 폴더에서 실행한다.
 
 ```bash
-python3 .opencode/skills/calendar-html/scripts/render_calendar.py \
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+python3 "$REPO_ROOT/.opencode/skills/calendar-html/scripts/render_calendar.py" \
   --input output/schedule-preview.md \
   --output output/calendar-view.html \
   --events-output output/calendar-events.json

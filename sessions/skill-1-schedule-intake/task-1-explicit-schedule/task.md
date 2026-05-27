@@ -1,50 +1,66 @@
 # Task 1. 명시적인 내 일정 찾기
 
-## 목표
+## 이번 태스크에서 배우는 것
 
-짧고 명확한 텍스트에서 나와 관련된 일정 후보를 찾고, `schedule-intake` Skill의 기본 골격을 완성한다.
+짧고 명확한 업무 텍스트에서 **내가 챙겨야 할 일정 후보**를 찾는 `schedule-intake` Skill의 기본 골격을 만듭니다.
 
-## 수정할 파일
+이번에는 다음 3가지만 작성합니다.
+
+- `description`
+- `When to use`
+- `Procedure`
+
+## 상황 보기
+
+아래 이미지는 실습 입력을 업무 메신저 화면처럼 표현한 것입니다.
+
+![Task 1 입력 화면](../../../task%201.png)
+
+실제 opencode agent는 같은 내용을 담은 `raw-text.md` 파일을 읽습니다.
+
+## 오른쪽 창에서 수정할 파일
 
 ```text
-.opencode/skills/schedule-intake/SKILL.md
+SKILL.md
 ```
 
-초기화가 필요할 때만 현재 디렉토리에서 실행한다.
+이 파일은 Task 1에 필요한 부분만 남겨둔 연습용 Skill 파일입니다.
+
+작성 후 현재 태스크 폴더에서 아래 명령을 실행해 실제 opencode Skill 위치에 반영합니다.
 
 ```bash
-cp skill-templates/schedule-intake/SKILL.md .opencode/skills/schedule-intake/SKILL.md
+./apply-skill.sh
 ```
 
-## 채울 섹션
+## 실행 방법
 
-- frontmatter의 `description`
-- `When to use`
-- `Procedure`의 기본 실행 순서
+현재 태스크 폴더에서 opencode를 실행합니다.
 
-## 진행 순서
+```bash
+opencode
+```
 
-1. `.opencode/skills/schedule-intake/SKILL.md`의 Task 1 관련 TODO를 직접 채운다.
-2. 저장 후 이 태스크 디렉토리에서 opencode를 실행한다.
-3. opencode agent에게 아래처럼 요청한다.
+opencode agent에게 아래처럼 요청합니다.
 
 ```text
 raw-text.md를 읽고, 나와 관련된 일정 후보를 정리해줘.
 ```
 
-## 목표 출력
+## 목표 체크
 
-`output/intake.md`에 최소한 아래 내용이 포함되어야 한다.
+`output/intake.md`에 다음이 포함되면 성공입니다.
+
+- 고객사 A 견적 콜이 일정 후보로 포함된다.
+- 날짜/시간이 `2026-05-23 10:00`으로 정리된다.
+- 카테고리는 `meeting`이다.
+- 민수님의 견적서 초안 작성은 제외된다.
+- 수진님의 회의록 정리는 제외된다.
+
+## 참고: 기대 출력 형태
+
+정확히 똑같은 문장일 필요는 없지만, 아래 정보가 들어가야 합니다.
 
 ```markdown
-# 일정 후보 추출 결과
-
-## 기준 정보
-
-- 기준 시각: 2026-05-22 14:00 KST
-- 입력 출처: raw-text.md
-- 사용자 역할: 현우
-
 ## 일정 후보
 
 | id | 제목 | 카테고리 | 원문 근거 | 날짜/시간 표현 | 확인 필요 |

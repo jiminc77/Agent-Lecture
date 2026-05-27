@@ -1,41 +1,65 @@
 # Task 4. 일정 후보를 JSON 이벤트로 변환하기
 
-## 목표
+## 이번 태스크에서 배우는 것
 
-`intake.md`에서 명확한 일정 후보를 읽어 `schedule-preview.md`를 만든다. 이 단계에서는 부족한 값이 거의 없는 입력만 다룬다.
+`intake.md`에 정리된 일정 후보를 읽고, 캘린더에 넣을 수 있는 JSON 이벤트로 바꾸는 `calendar-event-builder` Skill의 기본 골격을 만듭니다.
 
+이번에는 다음 3가지만 작성합니다.
 
-## 수정할 파일
+- `description`
+- `When to use`
+- `Procedure`
+
+## 이번 단계의 입력
+
+실제 opencode agent는 `intake.md` 파일을 읽습니다. 아래는 그 안에서 이번 태스크에 필요한 일정 후보 부분입니다.
+
+## 일정 후보
+
+| id | 제목 | 카테고리 | 원문 근거 | 날짜/시간 표현 | 확인 필요 |
+|---|---|---|---|---|---|
+| C1 | 고객사 A 견적 콜 | meeting | "현우님은 내일 오전 10시에 고객사 A와 견적 관련 콜을 진행합니다." | 2026-05-23 10:00-11:00 | 없음 |
+
+## 제외한 항목
+
+| 원문 | 제외 이유 |
+|---|---|
+| "회의 후 견적서 초안은 민수님이 작성합니다." | 민수님에게 배정된 일 |
+| "수진님은 회의록을 정리해서 채널에 올려주세요." | 수진님에게 배정된 일 |
+
+## 오른쪽 창에서 수정할 파일
 
 ```text
-.opencode/skills/calendar-event-builder/SKILL.md
+SKILL.md
 ```
 
-초기화가 필요할 때만 현재 디렉토리에서 실행한다.
+이 파일은 Task 4에 필요한 부분만 남겨둔 연습용 Skill 파일입니다.
+
+작성 후 현재 태스크 폴더에서 아래 명령을 실행합니다.
 
 ```bash
-cp skill-templates/calendar-event-builder/SKILL.md .opencode/skills/calendar-event-builder/SKILL.md
+./apply-skill.sh
 ```
 
-## 채울 섹션
+## 실행 방법
 
-- frontmatter의 `description`
-- `When to use`
-- `Procedure`의 기본 실행 순서
-
-## 진행 순서
-
-1. 실습자가 먼저 `.opencode/skills/calendar-event-builder/SKILL.md`의 Task 4 관련 TODO를 직접 채운다.
-2. 저장 후 이 태스크 디렉토리에서 opencode를 실행한다.
-3. opencode agent에게 아래처럼 요청한다.
+현재 태스크 폴더에서 opencode를 실행하고 아래처럼 요청합니다.
 
 ```text
 intake.md를 읽고, 캘린더에 넣을 수 있는 일정 초안을 만들어줘.
 ```
 
-## 목표 출력
+## 목표 체크
 
-`output/schedule-preview.md`에 아래와 같은 일정 초안이 포함되어야 한다.
+`output/schedule-preview.md`에 다음이 포함되면 성공입니다.
+
+- 고객사 A 견적 콜 일정 초안이 생성된다.
+- `title`, `start`, `end`, `notes` 필드가 있는 JSON 블록이 포함된다.
+- `start`는 `2026-05-23T10:00:00`이다.
+- `end`는 `2026-05-23T11:00:00`이다.
+- `end`는 `start`보다 늦다.
+
+## 참고: 기대 출력 형태
 
 ````markdown
 # 일정 초안
