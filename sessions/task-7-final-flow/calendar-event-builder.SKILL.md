@@ -7,7 +7,7 @@ description: "일정 후보 Markdown을 읽고 검증된 캘린더 이벤트 JSO
 
 ## When to use
 
-사용자가 `intake.md`나 `output/intake.md`의 일정 후보를 캘린더 이벤트 JSON, 일정 초안, 로컬 달력 미리보기로 바꿔달라고 할 때 사용한다.
+사용자가 `intake.md`나 `output/intake.md`의 일정 후보를 캘린더 이벤트 JSON이나 로컬 달력 미리보기로 바꿔달라고 할 때 사용한다.
 
 ## Inputs
 
@@ -79,22 +79,12 @@ JSON을 쓰기 전에 다음을 확인한다.
 4. 중복, 준비 일정 순서, 잘못된 시간 범위를 확인한다.
 5. 필요한 값과 확인이 모두 해결되기 전에는 최종 JSON을 쓰지 않는다.
 6. 생성할 이벤트를 요약하고 필요한 경우 사용자 확인을 받는다.
-7. 사람이 읽을 수 있는 일정 초안을 작성한다.
-8. 확정된 이벤트마다 필수 스키마의 `json` 코드블록을 작성한다.
-9. `output/schedule-preview.md`를 쓴다.
+7. 확정된 이벤트마다 필수 스키마의 `json` 코드블록을 작성한다.
+8. `output/schedule-preview.md`를 쓴다.
 
 ## Output template
 
-`output/schedule-preview.md`는 이 구조로 작성한다. 이벤트가 여러 개면 같은 구조를 일정별로 반복한다.
-
-````markdown
-# 일정 초안
-
-## 일정 1
-
-- 제목:
-- 시간:
-- 메모:
+`output/schedule-preview.md`에는 이벤트마다 아래 JSON 코드블록을 반복해서 작성한다.
 
 ```json
 {
@@ -105,12 +95,6 @@ JSON을 쓰기 전에 다음을 확인한다.
 }
 ```
 
-## 일정 2
-
-- 제목:
-- 시간:
-- 메모:
-
 ```json
 {
   "title": "",
@@ -119,4 +103,3 @@ JSON을 쓰기 전에 다음을 확인한다.
   "notes": ""
 }
 ```
-````

@@ -7,7 +7,7 @@ description: "일정 후보 Markdown을 읽고 캘린더에 넣을 수 있는 JS
 
 ## When to use
 
-사용자가 `intake.md`의 일정 후보를 캘린더 이벤트 JSON이나 일정 초안으로 바꿔달라고 할 때 사용한다.
+사용자가 `intake.md`의 일정 후보를 캘린더 이벤트 JSON으로 바꿔달라고 할 때 사용한다.
 
 ## Inputs
 
@@ -35,7 +35,7 @@ description: "일정 후보 Markdown을 읽고 캘린더에 넣을 수 있는 JS
 
 ## Validation checklist
 
-아래 작성 영역에 JSON을 만들기 전에 확인해야 하는 필수 값과 오류 조건을 한국어로 적으세요.
+아래 작성 영역에 JSON을 만들기 전에 확인해야 하는 필수 값과 오류 조건을 적으세요.
 
 힌트: 제목, 시작 시각, 종료 시각, ISO 형식, 종료가 시작보다 늦은지, 모호한 시간 표현을 확인하세요.
 
@@ -48,7 +48,7 @@ description: "일정 후보 Markdown을 읽고 캘린더에 넣을 수 있는 JS
 
 ## Clarification policy
 
-아래 작성 영역에 값이 부족하거나 모호할 때 사용자에게 어떻게 질문할지 한국어로 적으세요.
+아래 작성 영역에 값이 부족하거나 모호할 때 사용자에게 어떻게 질문할지 적으세요.
 
 힌트: 꼭 필요한 값만 짧게 질문하고, `오전 중` 같은 표현을 임의로 정확한 시각으로 바꾸지 마세요.
 
@@ -77,14 +77,7 @@ description: "일정 후보 Markdown을 읽고 캘린더에 넣을 수 있는 JS
 
 ## Output template
 
-`output/schedule-preview.md`는 이 구조로 작성한다.
-
-````markdown
-# 일정 초안
-
-- 제목:
-- 시간:
-- 메모:
+`output/schedule-preview.md`에는 아래 JSON 코드블록만 작성한다.
 
 ```json
 {
@@ -94,4 +87,3 @@ description: "일정 후보 Markdown을 읽고 캘린더에 넣을 수 있는 JS
   "notes": ""
 }
 ```
-````
