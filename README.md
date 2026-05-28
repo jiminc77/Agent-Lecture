@@ -38,6 +38,13 @@ source ~/.zshrc
 opencode --version
 ```
 
+Markdown 파일을 편하게 열고 수정하려면 ReText를 설치합니다.
+
+```bash
+sudo apt update
+sudo apt install -y retext
+```
+
 실습 자료를 처음 받는 경우:
 
 ```bash
