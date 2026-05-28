@@ -24,6 +24,14 @@ opencode를 설치합니다.
 curl -fsSL https://opencode.ai/install | bash
 ```
 
+설치 직후 `opencode` 명령이 바로 잡히지 않으면 터미널을 껐다가 다시 켭니다.
+
+터미널을 다시 열기 어렵다면 아래처럼 현재 터미널에 설정을 다시 적용합니다.
+
+```bash
+source ~/.zshrc
+```
+
 설치가 끝나면 아래 명령으로 확인합니다.
 
 ```bash
