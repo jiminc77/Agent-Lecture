@@ -15,23 +15,20 @@ description: "일정 후보 Markdown을 읽고 검증된 캘린더 이벤트 JSO
 - 없으면 `output/intake.md`를 읽는다.
 - 확인 질문이 필요한 경우 사용자의 답변을 반영한다.
 
-## Required event JSON
-
-아래 필드를 사용한다. 필수 필드를 추가하지 않는다.
-
-```json
-{
-  "title": "string",
-  "start": "YYYY-MM-DDTHH:MM:SS",
-  "end": "YYYY-MM-DDTHH:MM:SS",
-  "notes": "string"
-}
-```
-
 ## Output
 
 - 결과는 `output/schedule-preview.md`에 쓴다.
-- 아래 `Output template` 구조를 사용한다.
+- 파일에는 이벤트마다 아래 JSON 코드블록을 반복해서 작성한다.
+- 아래 필드만 사용한다. 필수 필드를 추가하지 않는다.
+
+```json
+{
+  "title": "",
+  "start": "YYYY-MM-DDTHH:MM:SS",
+  "end": "YYYY-MM-DDTHH:MM:SS",
+  "notes": ""
+}
+```
 
 ## Validation checklist
 
@@ -99,26 +96,4 @@ JSON을 쓰기 전에 다음을 확인한다.
 6.
 
 [작성 영역 끝]
-```
-
-## Output template
-
-`output/schedule-preview.md`에는 이벤트마다 아래 JSON 코드블록을 반복해서 작성한다.
-
-```json
-{
-  "title": "",
-  "start": "",
-  "end": "",
-  "notes": ""
-}
-```
-
-```json
-{
-  "title": "",
-  "start": "",
-  "end": "",
-  "notes": ""
-}
 ```
