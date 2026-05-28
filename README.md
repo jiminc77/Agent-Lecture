@@ -16,8 +16,6 @@ Task 1-3에서는 `schedule-intake` Skill을 만듭니다.
 Task 4-6에서는 `calendar-event-builder` Skill을 만듭니다.
 Task 7에서는 Skill 이름을 직접 말하지 않고 자연어 요청만으로 전체 흐름을 실행합니다.
 
-발표 자료는 아래 링크에서 볼 수 있습니다.
-
 [발표 자료 열기](https://jiminc77.github.io/Agent-Lecture/presentation.html)
 
 ## 설치 및 자료 받기
