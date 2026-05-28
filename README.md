@@ -24,12 +24,6 @@ opencode를 설치합니다.
 curl -fsSL https://opencode.ai/install | bash
 ```
 
-npm을 사용한다면 아래 명령으로 설치할 수도 있습니다.
-
-```bash
-npm install -g opencode-ai
-```
-
 설치가 끝나면 아래 명령으로 확인합니다.
 
 ```bash
