@@ -16,9 +16,27 @@ Task 1-3에서는 `schedule-intake` Skill을 만듭니다.
 Task 4-6에서는 `calendar-event-builder` Skill을 만듭니다.
 Task 7에서는 Skill 이름을 직접 말하지 않고 자연어 요청만으로 전체 흐름을 실행합니다.
 
-## 자료 받기
+## 설치 및 자료 받기
 
-처음 받는 경우:
+opencode를 설치합니다.
+
+```bash
+curl -fsSL https://opencode.ai/install | bash
+```
+
+npm을 사용한다면 아래 명령으로 설치할 수도 있습니다.
+
+```bash
+npm install -g opencode-ai
+```
+
+설치가 끝나면 아래 명령으로 확인합니다.
+
+```bash
+opencode --version
+```
+
+실습 자료를 처음 받는 경우:
 
 ```bash
 git clone https://github.com/jiminc77/Agent-Lecture.git
@@ -31,47 +49,6 @@ cd Agent-Lecture
 cd Agent-Lecture
 git pull origin main
 ```
-
-## 작업 방식
-
-각 태스크에서는 화면을 두 개만 사용합니다.
-
-```text
-왼쪽: GitHub에서 렌더링된 태스크 폴더 README
-오른쪽: 현재 태스크 폴더의 SKILL.md
-```
-
-`raw-text.md`와 `intake.md`는 opencode agent가 읽는 실행용 입력 파일입니다. 실습자는 GitHub의 태스크 폴더 화면에서 자동으로 렌더링되는 README를 보고, 같은 폴더의 `SKILL.md`만 수정하면 됩니다.
-
-각 태스크의 `SKILL.md`에는 그 단계에서 필요한 작성 영역만 열어둡니다. 예를 들어 Task 1에서 실습자가 채우는 영역은 `When to use`, `Procedure`뿐이고, Task 2에서 배울 판단 규칙은 Task 2의 `SKILL.md`에서 처음 등장합니다.
-
-루트의 `.opencode/skills` 폴더는 opencode가 실제로 읽는 작업 위치입니다. 실습자가 직접 수정하지 않고, 각 태스크의 `./apply-skill.sh` 또는 `./apply-skills.sh`가 현재 태스크의 Skill을 그 위치로 복사합니다.
-
-`SKILL.md`의 소제목은 영어로 유지해도 됩니다. 실제 작성 내용은 한국어로 작성하세요. 다만 파일 경로, 카테고리 코드, JSON 필드명처럼 다음 단계가 그대로 읽는 값은 템플릿에 적힌 이름을 유지합니다.
-
-## 실행 방식
-
-각 태스크는 해당 태스크 폴더로 이동해서 진행합니다. Task 1 예시:
-
-```bash
-cd sessions/skill-1-schedule-intake/task-1-explicit-schedule
-./apply-skill.sh
-opencode
-```
-
-진행 순서:
-
-1. GitHub에서 해당 태스크 폴더의 README를 읽습니다.
-2. 같은 폴더의 `SKILL.md`를 열고 작성 영역을 채웁니다.
-3. `./apply-skill.sh`를 실행해 실제 opencode Skill 위치에 복사합니다.
-4. `opencode`를 실행합니다.
-5. README에 있는 실행 요청 문장을 opencode agent에게 입력합니다.
-
-## 다시 시작하기
-
-태스크별 `SKILL.md`는 독립된 출발점입니다. 잘못 수정했으면 강사에게 해당 태스크의 새 `SKILL.md`를 다시 받거나, 강사가 제공한 정답 파일을 참고해 현재 태스크 폴더의 `SKILL.md`를 되돌리면 됩니다.
-
-이전 태스크를 잘 못해도 다음 태스크는 정답 상태에서 시작할 수 있도록 구성되어 있습니다.
 
 ## 태스크 바로가기
 
@@ -117,15 +94,4 @@ opencode
 │
 └── 각 task 폴더/
     └── output/
-```
-
-## 최종 확인
-
-Task 7까지 마치면 다음 파일이 생성되는 것을 목표로 합니다.
-
-```text
-sessions/task-7-final-flow/output/intake.md
-sessions/task-7-final-flow/output/schedule-preview.md
-sessions/task-7-final-flow/output/calendar-events.json
-sessions/task-7-final-flow/output/calendar-view.html
 ```
