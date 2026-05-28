@@ -43,8 +43,8 @@ def normalize_event(raw: dict[str, Any]) -> dict[str, str]:
     notes = str(raw.get("notes") or raw.get("description") or raw.get("memo") or "").strip()
     return {
         "title": title,
-        "start": start.isoformat(timespec="minutes"),
-        "end": end.isoformat(timespec="minutes"),
+        "start": start.isoformat(timespec="seconds"),
+        "end": end.isoformat(timespec="seconds"),
         "notes": notes,
     }
 

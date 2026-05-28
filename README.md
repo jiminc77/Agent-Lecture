@@ -16,6 +16,22 @@ Task 1-3에서는 `schedule-intake` Skill을 만듭니다.
 Task 4-6에서는 `calendar-event-builder` Skill을 만듭니다.
 Task 7에서는 Skill 이름을 직접 말하지 않고 자연어 요청만으로 전체 흐름을 실행합니다.
 
+## 자료 받기
+
+처음 받는 경우:
+
+```bash
+git clone https://github.com/jiminc77/Agent-Lecture.git
+cd Agent-Lecture
+```
+
+이미 받은 폴더를 최신 상태로 맞추는 경우:
+
+```bash
+cd Agent-Lecture
+git pull origin main
+```
+
 ## 작업 방식
 
 각 태스크에서는 화면을 두 개만 사용합니다.

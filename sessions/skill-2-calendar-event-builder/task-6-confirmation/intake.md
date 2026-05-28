@@ -3,7 +3,7 @@
 ## 기준 정보
 
 - 기준 시각: 2026-05-22 14:00 KST
-- 입력 출처: sessions/skill-1-schedule-intake/task-3-relative-ambiguous/raw-text.md
+- 입력 출처: Task 6 실습용 intake.md (Task 3 상황 기반, 중복 검토 후보 추가)
 - 사용자 역할: 현우
 
 ## 일정 후보

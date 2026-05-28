@@ -3,7 +3,7 @@
 ## 기준 정보
 
 - 기준 시각: 2026-05-22 14:00 KST
-- 입력 출처: sessions/skill-1-schedule-intake/task-1-explicit-schedule/raw-text.md
+- 입력 출처: Task 4 실습용 intake.md (Task 1 상황 기반, 1시간 일정으로 정리된 입력)
 - 사용자 역할: 현우
 
 ## 일정 후보
